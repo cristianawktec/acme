@@ -67,14 +67,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
         return null;
     }
 
-    public function getFromMessages(){
-        return $this->hasMany(Message::className(), ['from_user_id'=>'id']);
-    }
-
-    public function getToMessages(){
-        return $this->hasMany(Message::className(), ['to_user_id'=>'id']);
-    }
-
     /**
      * {@inheritdoc}
      */
